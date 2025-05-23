@@ -39,7 +39,7 @@ function Board({ imagesToHolds, selectedHolds, setSelectedHolds }) {
       {Object.keys(imagesToHolds).map((img) => (
         <image
           key={img}
-          href={img.startsWith("/") ? img : "/" + img}
+          href={`${process.env.PUBLIC_URL}/${img}`}
           x={0}
           y={0}
           width={width}

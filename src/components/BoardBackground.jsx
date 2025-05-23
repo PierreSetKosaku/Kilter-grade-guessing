@@ -8,7 +8,6 @@ function BoardBackground({
   children,
 }) {
   const imageKeys = Object.keys(imagesToHolds);
-
   return (
     <svg
       id={svgId}
