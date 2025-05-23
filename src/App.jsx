@@ -10,10 +10,10 @@ function App() {
 
   // Load JSON data on mount
   useEffect(() => {
-    fetch("/board-data.json")
+    fetch(process.env.PUBLIC_URL + "/board-data.json")
       .then((r) => r.json())
       .then(setImagesToHolds);
-    fetch("/usage-map.json")
+    fetch(process.env.PUBLIC_URL + "/usage-map.json")
       .then((r) => r.json())
       .then(setUsageMap);
   }, []);
